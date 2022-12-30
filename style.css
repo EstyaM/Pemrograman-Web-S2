@@ -1,87 +1,95 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body{
+    background-color: paleturquoise;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.text1 {
-    writing-mode:tb-rl;
-    -webkit-transform:rotate(-90deg);
-    -moz-transform:rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    transform: rotate(180deg);
-    white-space:nowrap;
-    float:left;
-    font-size: 900%;
-    }
 
-.text2 {
-    writing-mode:tb-rl;
-    -webkit-transform:rotate(-90deg);
-    -moz-transform:rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    transform: rotate(-1deg);
-    white-space:nowrap;
-    float:right;
-    font-size: 900%;
-    }
+h1{
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bolder;
+    color: red;
+}
 
-.button-option {
-    background: #ffffff;
-    height: 22vmin;
-    width: 22vmin;
-    border: none;
-    border-radius: 10px;
-    font-size: 12vmin;
-    color: #170202;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+#img1{
+    padding-top: 140px;
+    margin-left: 500px;
+    transform: rotateY(180deg);
 }
-#restart {
-    font-size: 1.3cm;
-    padding: lem;
-    border-radius: 10px;
-    background-color: #105db0;
-    color: #ffffff;
-    border: none;
-    position: relative;
-    margin: 1.5cm auto 0 auto;
-    display: block;
+
+#img2{
+    padding-top: 20px;
+    position:absolute;
+    top: 20%;
+    left: 52%;
 }
-.popup {
-    background: linear-gradient(135deg, #291fb9, #b1091d);
-    height: 100%;
-    width: 100%;
+
+#rock{
     position: absolute;
-    display: flex;
-    z-index: 2;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: lem;
-    font-size: 12vmin;
+    left: 400px;
+    top: 75%;
+    visibility: hidden;
 }
-body {
-	height: 100vh;
-	background: linear-gradient(135deg, #0b67ae, #9a1219);
+
+#paper{
+    position: absolute;
+    left: 560px;
+    top: 75%;
+    visibility: hidden;
 }
-html {
-	font-size: 16px;
+
+#scissors{
+    position: absolute;
+    top: 75%;
+    left: 720px;
+    visibility: hidden;
 }
-.wrapper {
-	position: absolute;
-	transform: translate(-50%, -50%);
-	top: 50%;
-	left: 50%;
+
+button{
+    height: 80px;
+    width: 140px;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: purple;
+    color: floralwhite;
+    border: solid 4px floralwhite;
+    border-radius: 44px;
+    cursor: pointer;
+    margin-left: 26%;
+    margin-top: 5%;
 }
-.container {
-	width: 70vmin;
-	height: 70vmin;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 2vmin;
+
+#start{
+    background-color: darkgreen;
+    position: absolute;
+    top: 70%;
+    left: 20%;
 }
-.popup.hide {
-    display: none;
+
+@keyframes shakeLeft {
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
 }
+
+@keyframes shakeRight {
+    0%{
+         transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+
+
+}
+
